@@ -19,7 +19,7 @@ def encode(images):
     return encoded_list
 
 # TODO edit path variable as you see fit
-path = "D:\\Python Projects\\ImageRecog\\EmployeeImg\\"
+path = " "
 images = []
 employee_names = []
 List = os.listdir(path)
@@ -39,7 +39,7 @@ encoded_employee_list = encode(images)
 print("[+] Finished Initialization!")
 
 #Video capture through webcam initiated
-capture = cv2.VideoCapture(r"C:\Users\OBITO\Videos\Desktop\bill.mp4")
+capture = cv2.VideoCapture(0)
 #Loop to capture images of employees frame by frame via a webcam which is of the device id 0 here
 print("\n[+] If you want to terminate the live feed, just press ctrl+c as the keyboard interrupt")
 while True:
