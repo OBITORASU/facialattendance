@@ -11,6 +11,11 @@ Dependencies include:
 
 This code is entirely written in python.
 
+Things to do:
+
+Make a folder where you can store images of faces along with the python file before running it. 
+Note: It won't identify any faces if you don't give it images to identify faces with.
+
 Instructions:
 
 Upon downloading the webcam.py file, make sure all the dependencies are met. Before running please add the path to the folder which contains all the images of the faces you want to recognize in a video feed. Once that has been taken care of, the code should run normally and should easily detect faces.
