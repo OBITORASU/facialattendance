@@ -1,13 +1,23 @@
 # Facial Attendance
 This is a prototype of a model which uses facial data to recognize, authenticate and validate attendance data of people.
 
-Dependencies include:
-1) OpenCV
-2) dlib
-3) cmake
-4) face_recognition
-5) Python 3
 
-This code is entirely written in python.
+## Dependencies 
+All project dependencies are listed in requirements.txt file.
+
+To install just use:
+```
+pip3 install -r requirements.txt
+```
+
+## Instructions
+First use the command:
+```
+git clone https://github.com/OBITORASU/facialattendance.git
+```
+After git cloning the project, to use it you first need to create a folder named images inside the cloned folder. The images folder will 
+contain images of your employees with their names as the file name for identification. When the model is run on the webcam, any employee 
+from the images folder will be recognized on the web cam feed and their attendence entry will be stored in an auto generated csv file. The 
+csv file is regenerated every time the program is run so it is recommended that you take backup of each csv when running this consecutively.
 
 
