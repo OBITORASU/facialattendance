@@ -6,8 +6,7 @@ Dependencies include:
 2) dlib
 3) cmake
 4) face_recognition
-5) Visual Studio C++
-6) Python 3
+5) Python 3
 
 This code is entirely written in python.
 
