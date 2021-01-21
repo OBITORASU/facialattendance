@@ -39,8 +39,7 @@ def attendance(name):
             csvfile.writelines("\n{0},{1},{2}".format(name,time,date))
 
 
-# TODO edit path variable as you see fit
-path = " "
+path = os.path.dirname(__file__)+"/images/"
 images = []
 employee_names = []
 List = os.listdir(path)
