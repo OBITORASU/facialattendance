@@ -8,6 +8,7 @@ import datetime
 def encode(images):
     #List of Encoded Images
     encoded_list = []
+    missing = []
     #Function to encode each image in the image list
     for image, name in zip(images, employee_names):
         image = cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
@@ -16,8 +17,9 @@ def encode(images):
             encoded_list.append(encode)
         except:
             print("[-] No face found in image {0}!".format(name))
+            missing.append(name)
     #Return encoded image list
-    return encoded_list
+    return encoded_list, missing
 #Function to make the attendance log file
 def createcsv():
     with open('logs.csv', 'w') as csvfile:
@@ -42,9 +44,9 @@ def attendance(name):
 path = os.path.dirname(__file__)+"/images/"
 images = []
 employee_names = []
-List = os.listdir(path)
+lst = os.listdir(path)
 #Looping through each employee name in list
-for name in List:
+for name in lst:
     #Removes the extension from the names and updates Employee Name List
     employee_names.append(os.path.splitext(name)[0])
     #Images loaded 
@@ -53,8 +55,13 @@ for name in List:
     images.append(current_image)
 
 print("[+] Please wait initializing.......")
+
 #List of encoded image of employees created
-encoded_employee_list = encode(images)
+encoded_employee_list, missing = encode(images)
+#Sanitize the final list
+for name in missing:
+    employee_names.remove(name)
+
 print("[+] Finished Initialization!")
 
 #Create the log file
