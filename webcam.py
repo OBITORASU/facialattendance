@@ -1,5 +1,6 @@
 import os
 import cv2
+import sys
 import numpy as np
 import face_recognition 
 import csv
@@ -40,11 +41,20 @@ def attendance(name):
             date = now.strftime(r"%d:%m:%Y")
             csvfile.writelines("\n{0},{1},{2}".format(name,time,date))
 
-
 path = os.path.dirname(__file__)+"/images/"
+#Exception if images folder doesn't exist
+if(os.path.isdir(path)):
+    pass
+else:
+    print("Please create the 'images' folder inside the script directory.")
+    sys.exit(1)
 images = []
 employee_names = []
 lst = os.listdir(path)
+#Return exception if no images are present
+if not lst:
+    print("Please add some employee images for the model to recognize.")
+    sys.exit(1)
 #Looping through each employee name in list
 for name in lst:
     #Removes the extension from the names and updates Employee Name List
