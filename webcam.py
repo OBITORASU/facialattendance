@@ -122,7 +122,7 @@ while True:
         #Error exception 
         print("\n[-] Webcam not detected or the feed has been interrupted.")
         print("[-] Terminating!")
-        break
+        sys.exit(1)
 
 capture.release()
 cv2.destroyAllWindows()
