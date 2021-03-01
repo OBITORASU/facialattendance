@@ -15,7 +15,7 @@ First use the command:
 ```
 git clone https://github.com/OBITORASU/facialattendance.git
 ```
-After git cloning the project, to use it you first need to create a folder named images inside the cloned folder. The images folder will 
+After git cloning the project, to use it first you need to create a folder named images inside the clone folder. The images folder will 
 contain images of your employees with their names as the file name for identification. When the model is run on the webcam, any employee 
 from the images folder will be recognized on the web cam feed and their attendence entry will be stored in an auto generated csv file. The 
 csv file is regenerated every time the program is run so it is recommended that you take backup of each csv when running this consecutively.
