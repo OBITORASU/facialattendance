@@ -82,7 +82,7 @@ def main():
     #Video capture through webcam initiated
     capture = cv2.VideoCapture(0)
     #Loop to capture images of employees frame by frame via a webcam which is of the device id 0 here
-    print("\n[+] If you want to terminate the live feed, just press ctrl+c as the keyboard interrupt")
+    print("\n[+] If you want to terminate the live feed and exit, just press ctrl+c")
     while True:
         ret, image = capture.read()
         try:
