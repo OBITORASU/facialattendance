@@ -1,5 +1,5 @@
 # Facial Attendance
-This is a model which uses facial data to recognize, authenticate and validate attendance of people. It uses `face_recognition` a pretained neural network capable of highly accurate face detection based on existing pictures of users.
+This is a model which uses facial data to recognize, authenticate and validate attendance of people. It uses `face_recognition` a pretained neural network capable of highly accurate face detection based on features extracted from existing pictures of users.
 
 
 ## Dependencies 
