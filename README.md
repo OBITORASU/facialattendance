@@ -3,7 +3,7 @@ This is a model which uses facial data to recognize, authenticate and validate a
 
 
 ## Dependencies 
-All project dependencies are listed in requirements.txt file.
+All project dependencies are listed in `requirements.txt` file.
 
 To install just use:
 ```
