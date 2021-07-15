@@ -9,7 +9,7 @@ import datetime
 def main():
     #Function definition to encode images
     def encode(images):
-        #List of Encoded Images
+        #List of Encoded Images and a list to capture images with faces missing
         encoded_list = []
         missing = []
         #Function to encode each image in the image list
